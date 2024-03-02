@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Element Characteristics</title>
+    <script>
+        function showMessage() {
+            var div1 = document.getElementById("div1");
+            var div3 = document.getElementById("div3");
+            
+            var content1 = div1.innerHTML;
+            var content3 = div3.innerHTML;
+
+            alert (content1  + content3);
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">Содержимое первого div</div>
+    <div id="div2" onclick="showMessage()">Нажмите на меня, чтобы увидеть содержание других div</div>
+    <div id="div3">Содержимое третьего div</div>
+</body>
+</html>

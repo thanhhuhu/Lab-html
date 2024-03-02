@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Count Russian Uppercase Letters</title>
+</head>
+<body>
+    <form id="form">
+        <label for="input">Введите строку:</label><br>
+        <input type="text" id="input" name="input"><br>
+        <button type="button" onclick="countRussianUppercaseLetters()">Проверить</button><br>
+        <label for="output">Количество заглавных букв русского алфавита:</label><br>
+        <input type="text" id="output" name="output" readonly>
+    </form>
+
+    <script>
+        function countRussianUppercaseLetters() {
+            var input = document.getElementById("input").value;
+            var count = 0;
+
+            for (var i = 0; i < input.length; i++) {
+                // Проверяем, является ли текущий символ заглавной буквой русского алфавита
+                if (input[i] >= 'А' && input[i] <= 'Я') {
+                    count++;
+                }
+            }
+
+            document.getElementById("output").value = count;
+        }
+    </script>
+</body>
+</html>

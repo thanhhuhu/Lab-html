@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Empty Fields</title>
+</head>
+<body>
+    <h2><b>Test</b></h2>
+    <input type="text" id="text1">
+    <br><br>
+    <input type="text" id="text2"><br><br>
+    <input type="text" id="text3"><br><br>
+    <input type="text" id="text4"><br><br>
+    <input type="text" id="text5"><br><br>
+    <input type="text" id="text6"><br><br>
+    <input type="text" id="text7"><br><br>
+    <input type="text" id="text8"><br><br>
+    <input type="text" id="text9"><br><br>
+    <input type="text" id="text10"><br><br>
+
+    <h2><b>Password</b></h2>
+    <input type="password" id="pass1"><br><br>
+    <input type="password" id="pass2"><br><br>
+    <input type="password" id="pass3"><br><br>
+    <input type="password" id="pass4"><br><br>
+    <input type="password" id="pass5"><br><br>
+    <input type="password" id="pass6"><br><br>
+    <input type="password" id="pass7"><br><br>
+    <input type="password" id="pass8"><br><br>
+    <input type="password" id="pass9"><br><br>
+    <input type="password" id="pass10"><br><br>
+
+    <button onclick="countEmptyFields()">start</button>
+
+    <p id="result"></p>
+
+    <script>
+        function countEmptyFields()
+         {
+            var emptyCount = 0; 
+
+            for (var i = 1; i <= 10; i++) {
+                var textField = document.getElementById("text" + i);
+                if (textField.value === "") {
+                    emptyCount++;
+                }
+            }
+            for (var j = 1; j <= 10; j++) {
+                var passField = document.getElementById("pass" + j);
+                if (passField.value === "") {
+                    emptyCount++;
+                }
+            }
+            document.getElementById("result").innerHTML = "Количество незаполненных полей: " + emptyCount;
+        }
+    </script>
+</body>
+</html>

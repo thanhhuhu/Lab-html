@@ -1,0 +1,18 @@
+.object 
+{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+}
+#object1 {
+    margin-bottom: 50px;
+    right: 50px;
+}
+#object2 {
+    margin-bottom: 150px;
+    right: 150px;
+}

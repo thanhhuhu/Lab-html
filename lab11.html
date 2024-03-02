@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remove Spaces</title>
+</head>
+<body>
+    <form id="form">
+        <label for="input">Enter a string:</label><br>
+        <input type="text" id="input" name="input"><br>
+        <button type="button" onclick="removeSpaces()">Go</button><br>
+        <label for="output">String without spaces:</label><br>
+        <input type="text" id="output" name="output" readonly>
+    </form>
+
+    <script>
+        function removeSpaces() {
+            var input = document.getElementById("input").value;
+            var output = input.trim(); 
+
+            document.getElementById("output").value = output;
+        }
+    </script>
+</body>
+</html>

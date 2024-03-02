@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Validator</title>
+</head>
+<body>
+    <form action="#" id="dateForm">
+        <h4><b>Enter the date</b></h4>
+        <h4>##/##/####</h4>
+        <input type="text" id="dateInput" placeholder="##/##/####" required>
+        <button type="button" onclick="check()">Check</button>
+    </form>
+    <script>
+        function check() 
+        {
+            var inputDate = document.getElementById("dateInput").value;
+            var pattern = /^\d{2}\/\d{2}\/\d{4}$/;
+
+            if (pattern.test(inputDate)) {
+                alert("Valid date format!");
+            } else {
+                alert("Invalid date format! Please enter date in the format ##/##/####");
+            }
+        }
+    </script>
+</body>
+</html>

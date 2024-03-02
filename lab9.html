@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+        <div>
+            <h2>Write text</h2>
+            <input type="text" name ="input1">
+            <h2>Write text</h2>
+            <input type="text" name="input2">
+            <h2>Write text</h2>
+            <input type="text" name="input3">
+            <h2>Write text</h2>
+            <input type="text" name="input4">
+            <h2>Write text</h2>
+            <input type="text" name="input5">
+            <h2>Write text</h2>
+            <input type="text" name="input6">
+            <h2>Write text</h2>
+            <input type="text" name="input7">
+            <h2>Write text</h2>
+            <input type="text" name="input8">
+            <h2>Write text</h2>
+            <input type="text" name="input9">
+            <h2>Write text</h2>
+            <input type="text" name="input10">
+            <h2>Write text</h2>
+            <input type="text" name="input11">
+            <h2>Write text</h2>
+            <input type="text" name="input12">
+            <h2>Write text</h2>
+            <input type="text" name="input13">
+            <h2>Write text</h2>
+            <input type="text" name="input14">
+            <h2>Write text</h2>
+            <input type="text" name="input15">
+            <br>
+            <button type="button" onclick="check()">Start</button>
+        </div>
+    </form>
+    <script>
+        function check()
+        {
+            var fieldCount = 0;
+            var fields = document.querySelectorAll('input[type="text"]');
+            for (var i = 0; i < fields.length; i++)
+            {
+                if (fields[i].value.trim().length > 6)
+                {
+                    fieldCount++;
+                }
+            }
+            if(fieldCount >= 3)
+            {
+                alert("Minimum 3 fields are filled in with lines longer than 6 characters!");
+            }else
+            {
+                alert("Please fill at least three input boxes with lines longer than 6 characters!");
+            }
+        }
+    </script>
+</body>
+
+</html>
